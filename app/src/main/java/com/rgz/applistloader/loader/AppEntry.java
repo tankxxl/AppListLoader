@@ -1,10 +1,8 @@
-package com.umpay.applistloader.loader;
+package com.rgz.applistloader.loader;
 
 import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.graphics.drawable.Drawable;
-
-import com.umpay.applistloader.loader.AppListLoader;
 
 import java.io.File;
 

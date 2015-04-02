@@ -1,4 +1,4 @@
-package com.umpay.applistloader;
+package com.rgz.applistloader;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

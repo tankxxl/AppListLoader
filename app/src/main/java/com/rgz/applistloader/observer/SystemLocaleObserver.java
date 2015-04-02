@@ -1,12 +1,13 @@
-package com.umpay.applistloader.observer;
+package com.rgz.applistloader.observer;
 
+import android.annotation.SuppressLint;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.util.Log;
 
-import com.umpay.applistloader.loader.AppListLoader;
+import com.rgz.applistloader.loader.AppListLoader;
 
 
 /**
@@ -19,16 +20,21 @@ public class SystemLocaleObserver extends BroadcastReceiver {
 
     private AppListLoader mLoader;
 
+    public SystemLocaleObserver() {
+
+    }
+
     public SystemLocaleObserver(AppListLoader loader) {
         mLoader = loader;
         IntentFilter filter = new IntentFilter(Intent.ACTION_LOCALE_CHANGED);
         mLoader.getContext().registerReceiver(this, filter);
     }
 
+    @SuppressLint("LongLogTag")
     @Override
     public void onReceive(Context context, Intent intent) {
-        if (DEBUG) Log.i(TAG, "+++ The observer has detected a locale change!" +
-                " Notifying Loader... +++");
+        if (DEBUG)
+            Log.i(TAG, "+++observer detected a locale change!Notifying Loader+++");
 
         // Tell the loader about the change.
         mLoader.onContentChanged();

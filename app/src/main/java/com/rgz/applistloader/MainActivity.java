@@ -1,4 +1,4 @@
-package com.umpay.applistloader;
+package com.rgz.applistloader;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,8 +13,8 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
-import com.umpay.applistloader.loader.AppEntry;
-import com.umpay.applistloader.loader.AppListLoader;
+import com.rgz.applistloader.loader.AppEntry;
+import com.rgz.applistloader.loader.AppListLoader;
 
 import java.util.List;
 

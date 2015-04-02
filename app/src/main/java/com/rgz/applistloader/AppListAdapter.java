@@ -1,4 +1,4 @@
-package com.umpay.applistloader;
+package com.rgz.applistloader;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,12 +8,12 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.umpay.applistloader.loader.AppEntry;
+import com.rgz.applistloader.loader.AppEntry;
 
 import java.util.List;
 
 /**
- * A custom ArrayAdapter used by the {@link com.umpay.applistloader.MainActivity.AppListFragment} to display the
+ * A custom ArrayAdapter used by the {@link com.rgz.applistloader.MainActivity.AppListFragment} to display the
  * device's installed applications.
  */
 public class AppListAdapter extends ArrayAdapter<AppEntry> {

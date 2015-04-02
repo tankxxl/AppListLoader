@@ -1,12 +1,13 @@
-package com.umpay.applistloader.observer;
+package com.rgz.applistloader.observer;
 
+import android.annotation.SuppressLint;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.util.Log;
 
-import com.umpay.applistloader.loader.AppListLoader;
+import com.rgz.applistloader.loader.AppListLoader;
 
 
 /**
@@ -19,6 +20,9 @@ public class InstalledAppsObserver extends BroadcastReceiver {
     private static final boolean DEBUG = true;
 
     private AppListLoader mLoader;
+
+    public InstalledAppsObserver() {
+    }
 
     public InstalledAppsObserver(AppListLoader loader) {
         mLoader = loader;
@@ -37,10 +41,11 @@ public class InstalledAppsObserver extends BroadcastReceiver {
         mLoader.getContext().registerReceiver(this, sdFilter);
     }
 
+    @SuppressLint("LongLogTag")
     @Override
     public void onReceive(Context context, Intent intent) {
-        if (DEBUG) Log.i(TAG, "+++ The observer has detected an application change!" +
-                " Notifying Loader... +++");
+        if (DEBUG)
+            Log.i(TAG, "+++ observer has detected an app change! Notifying Loader. +++");
 
         // Tell the loader about the change.
         mLoader.onContentChanged();

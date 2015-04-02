@@ -1,4 +1,4 @@
-package com.umpay.applistloader.loader;
+package com.rgz.applistloader.loader;
 
 import android.content.Context;
 import android.content.pm.ApplicationInfo;
@@ -6,8 +6,8 @@ import android.content.pm.PackageManager;
 import android.support.v4.content.AsyncTaskLoader;
 import android.util.Log;
 
-import com.umpay.applistloader.observer.InstalledAppsObserver;
-import com.umpay.applistloader.observer.SystemLocaleObserver;
+import com.rgz.applistloader.observer.InstalledAppsObserver;
+import com.rgz.applistloader.observer.SystemLocaleObserver;
 
 import java.text.Collator;
 import java.util.ArrayList;
